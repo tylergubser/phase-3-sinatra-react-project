@@ -1,3 +1,3 @@
-class WaitListPatient < ApplicationController
+class WaitListPatientsController < ApplicationController
     
 end

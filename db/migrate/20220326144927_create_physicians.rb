@@ -5,6 +5,8 @@ class CreatePhysicians < ActiveRecord::Migration[6.1]
       t.string :last_name
       t.string :country
       t.integer :license_number
+      t.string :username
+      t.string :password
     end
   end
 end
