@@ -23,6 +23,9 @@ ActiveRecord::Schema.define(version: 2022_03_29_163758) do
     t.string "last_name"
     t.string "phone"
     t.string "id_number"
+    t.string "email"
+    t.string "username"
+    t.string "password"
   end
 
   create_table "physicians", force: :cascade do |t|
@@ -30,6 +33,8 @@ ActiveRecord::Schema.define(version: 2022_03_29_163758) do
     t.string "last_name"
     t.string "country"
     t.integer "license_number"
+    t.string "username"
+    t.string "password"
   end
 
   create_table "users", force: :cascade do |t|
