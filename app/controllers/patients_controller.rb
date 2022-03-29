@@ -9,6 +9,7 @@ class PatientsController < ApplicationController
         patient.to_json(include: :appointments)
     end
 
+
     post '/patients' do
         patient = Patient.create(
           first_name:params[:first_name],
@@ -21,4 +22,7 @@ class PatientsController < ApplicationController
         )
         patient.to_json
       end
+
+    
+
 end

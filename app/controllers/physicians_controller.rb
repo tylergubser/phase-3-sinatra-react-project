@@ -1,5 +1,5 @@
-class PhysiciansController < ApplicationController
 
+class PhysiciansController < ApplicationController
     get "/physicians" do 
         physician = Physician.all
         physician.to_json

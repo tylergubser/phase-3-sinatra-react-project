@@ -1,5 +1,5 @@
-class WaitListPatient < ActiveRecord::Base
-    belongs_to :patient
+class Waitlistpatient < ActiveRecord::Base
+    
 
 
 end
