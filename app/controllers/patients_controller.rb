@@ -14,14 +14,27 @@ class PatientsController < ApplicationController
         patient = Patient.create(
           first_name:params[:first_name],
           last_name:params[:last_name],
-          username:params[:username],
-          email:params[:email],
           phone:params[:phone],
           id_number:params[:id_number],
+          email:params[:email],
+          username:params[:username],
           password:params[:password],
         )
         patient.to_json
       end
+
+    patch '/patients/:id' do 
+      patient = Patient.find(params[:id])
+      patient.update(
+        first_name:params[:first_name],
+        last_name:params[:last_name],
+        phone:params[:phone],
+        id_number:params[:id_number],
+        email:params[:email],
+      )
+      patient.to_json
+    
+    end
 
     
 
