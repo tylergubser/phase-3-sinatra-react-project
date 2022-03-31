@@ -4,7 +4,9 @@ class Patient < ActiveRecord::Base
     belongs_to :waitListPatients
     
 
-
-
+    def new_appontments(physician, appt_date)
+    
+        Appointment.create(patient_id: self.id, physician_id: physician.id, appt_date: appt_date)
+    end
 
 end

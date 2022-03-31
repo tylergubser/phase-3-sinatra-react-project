@@ -1,15 +1,15 @@
 class PatientsController < ApplicationController
     get "/patients" do 
         patients = Patient.all
-        patients.to_json
+        patients.to_json(include: :appointments)
     end 
 
-    get "/patients/:id" do 
-        patient = Patient.find(params[:id])
-        patient.to_json(include: :appointments)
-    end
+    get "/patients/:username" do 
+      patient = Patient.find_by_username(params[:username])
+      patient.to_json(include: :appointments)
+  end
 
-
+  
     post '/patients' do
         patient = Patient.create(
           first_name:params[:first_name],

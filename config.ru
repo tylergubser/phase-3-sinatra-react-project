@@ -16,3 +16,4 @@ run ApplicationController
 use PatientsController
 use PhysiciansController
 use WaitListPatientsController
+use AppointmentsController
