@@ -21,4 +21,16 @@ class PhysiciansController < ApplicationController
         )
         physician.to_json
       end
+
+      patch '/physicians/:id' do 
+        physician = Physician.find(params[:id])
+        physician.update(
+          first_name:params[:first_name],
+          last_name:params[:last_name],
+          country:params[:country],
+          license_number:params[:license_number]
+        )
+        patient.to_json
+      
+      end
 end 
