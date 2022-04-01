@@ -12,7 +12,7 @@ puts "🌱 Seeding physicians..."
     end
 
 puts "🌱 Seeding appointments..."
-    30.times do
-        Appointment.create(patient_id: Patient.ids.sample, physician_id: Physician.ids.sample, appt_date: Faker::Date.between(from:'2022-04-01', to:'2022-05-01'))
+    40.times do
+        Appointment.create(patient_id: Patient.ids.sample, physician_id: Physician.ids.sample, appt_date: Faker::Date.between(from:'2022-03-01', to:'2022-05-01'))
     end
 puts "✅ Done seeding!"
